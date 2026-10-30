@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoVida: ações simples para uma vida mais sustentável.">
+  <title>EcoVida - Sustentabilidade</title>
+ 
+  <style>
+    :root {
+      --verde-principal: #2E7D32;
+      --verde-escuro: #1B5E20;
+      --verde-claro: #E8F5E9;
+      --fundo: #F4F8F4;
+      --superficie: #FFFFFF;
+      --texto: #263238;
+      --texto-secundario: #546E7A;
+      --azul: #0277BD;
+      --amarelo: #8A5A00;
+      --amarelo-fundo: #FFF8E1;
+      --borda: #DCE7DD;
+      --foco: #1565C0;
+      --sombra: 0 8px 24px rgba(38, 50, 56, 0.10);
+    }
+ 
+    * {
+      box-sizing: border-box;
+    }
+ 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+ 
+    .pagina {
+      width: min(100% - 32px, 960px);
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+ 
+    .cabecalho {
+      background: var(--verde-principal);
+      color: #FFFFFF;
+      padding: 32px 24px;
+      border-radius: 20px;
+      box-shadow: var(--sombra);
+    }
+ 
+    h1, h2, p {
+      margin-top: 0;
+    }
+ 
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 6vw, 3rem);
+    }
+ 
+    .descricao {
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+ 
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+ 
+    .menu a {
+      color: #FFFFFF;
+      background: var(--verde-escuro);
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
+    .menu a:hover {
+      text-decoration: underline;
+    }
+ 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 4px solid var(--foco);
+      outline-offset: 3px;
+    }
+ 
+    main {
+      margin-top: 24px;
+    }
+ 
+    .titulo-secao {
+      color: var(--verde-escuro);
+      margin-bottom: 6px;
+    }
+ 
+    .introducao {
+      color: var(--texto-secundario);
+    }
+ 
+    .painel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 24px 0;
+    }
+ 
+    .card {
+      background: var(--superficie);
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: var(--sombra);
+    }
+ 
+    .icone {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+ 
+    .card h2 {
+      color: var(--verde-escuro);
+      margin-bottom: 8px;
+    }
+ 
+    .numero {
+      color: var(--verde-principal);
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+ 
+    .unidade {
+      color: var(--texto-secundario);
+    }
+ 
+    .mensagens {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+ 
+    .mensagem {
+      padding: 16px;
+      border-radius: 12px;
+      font-weight: 500;
+    }
+ 
+    .sucesso {
+      background: var(--verde-claro);
+      color: var(--verde-escuro);
+      border-left: 5px solid var(--verde-principal);
+    }
+ 
+    .alerta {
+      background: var(--amarelo-fundo);
+      color: #5D4200;
+      border-left: 5px solid var(--amarelo);
+    }
+ 
+    .dica {
+      background: #E3F2FD;
+      color: #0D3B5C;
+      border-left: 5px solid var(--azul);
+    }
+ 
+    .botao-principal {
+      width: 100%;
+      padding: 16px 20px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--verde-principal);
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+ 
+    .botao-principal:hover {
+      background: var(--verde-escuro);
+    }
+ 
+    footer {
+      text-align: center;
+      color: var(--texto-secundario);
+      margin-top: 24px;
+    }
+ 
+    @media (max-width: 720px) {
+      .painel {
+        grid-template-columns: 1fr;
+      }
+ 
+      .cabecalho {
+        padding: 24px 18px;
+      }
+ 
+      .pagina {
+        width: min(100% - 24px, 960px);
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="pagina">
+ 
+    <header class="cabecalho">
+      <h1>🌱 EcoVida</h1>
+      <p class="descricao">
+        Pequenas atitudes podem gerar grandes mudanças. Acompanhe suas ações
+        sustentáveis e contribua para um futuro melhor.
+      </p>
+ 
+      <nav class="menu" aria-label="Temas ambientais">
+        <a href="#agua">💧 Água</a>
+        <a href="#reciclagem">♻️ Reciclagem</a>
+        <a href="#energia">☀️ Energia</a>
+      </nav>
+    </header>
+ 
+    <main>
+      <section aria-labelledby="titulo-indicadores">
+        <h2 id="titulo-indicadores" class="titulo-secao">
+          Seu impacto ambiental hoje
+        </h2>
+ 
+        <p class="introducao">
+          Veja como pequenas escolhas ajudam a preservar os recursos naturais.
+        </p>
+ 
+        <div class="painel">
+ 
+          <article class="card" id="agua">
+            <div class="icone" aria-hidden="true">💧</div>
+            <h2>Economia de água</h2>
+            <p class="numero">20 litros</p>
+            <p class="unidade">
+              Você reduziu o consumo de água em atividades do dia a dia.
+            </p>
+          </article>
+ 
+          <article class="card" id="reciclagem">
+            <div class="icone" aria-hidden="true">♻️</div>
+            <h2>Materiais reciclados</h2>
+            <p class="numero">8 itens</p>
+            <p class="unidade">
+              Materiais foram separados corretamente para reciclagem.
+            </p>
+          </article>
+ 
+          <article class="card" id="energia">
+            <div class="icone" aria-hidden="true">☀️</div>
+            <h2>Consumo de energia</h2>
+            <p class="numero">12% menor</p>
+            <p class="unidade">
+              Redução estimada no consumo de energia em comparação ao padrão.
+            </p>
+          </article>
+ 
+        </div>
+      </section>
+ 
+      <section class="mensagens" aria-label="Informações importantes">
+ 
+        <div class="mensagem sucesso">
+          <strong>✓ Meta concluída:</strong>
+          você registrou uma ação sustentável hoje.
+        </div>
+ 
+        <div class="mensagem alerta">
+          <strong>⚠ Atenção:</strong>
+          lembre-se de separar corretamente os resíduos antes do descarte.
+        </div>
+ 
+        <div class="mensagem dica">
+          <strong>💡 Dica sustentável:</strong>
+          desligue aparelhos que não estão sendo utilizados para evitar desperdício.
+        </div>
+ 
+      </section>
+ 
+      <button class="botao-principal" type="button">
+        + Registrar nova ação sustentável
+      </button>
+    </main>
+ 
+    <footer>
+      <p>EcoVida • Cada escolha sustentável faz diferença. 🌍</p>
+    </footer>
+ 
+  </div>
+</body>
+</html>
